@@ -7,6 +7,106 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        /* Gradient background cho body */
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Navbar tinh chỉnh */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tiêu đề trang */
+        .page-title {
+            font-weight: 700;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Thẻ đơn hàng */
+        .order-card {
+            border: none;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .order-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .order-card .card-header {
+                background: linear-gradient(to right, #3498db, #2980b9);
+                color: white;
+                border-radius: 15px 15px 0 0;
+                padding: 15px 20px;
+            }
+
+            .order-card .card-body {
+                padding: 20px;
+            }
+
+            .order-card .btn-primary {
+                border-radius: 25px;
+                padding: 8px 20px;
+                font-weight: 500;
+                transition: background 0.3s ease;
+            }
+
+                .order-card .btn-primary:hover {
+                    background: #2c5282;
+                }
+
+        /* Empty state */
+        #no-orders {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+            #no-orders .btn-primary {
+                border-radius: 25px;
+                padding: 10px 25px;
+            }
+
+        /* Modal chi tiết */
+        .modal-content {
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            background: #3498db;
+            color: white;
+            border-radius: 15px 15px 0 0;
+            padding: 15px 20px;
+        }
+
+        .modal-body {
+            padding: 25px;
+        }
+
+            .modal-body .card {
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+            }
+
+            .modal-body .card-body {
+                padding: 20px;
+            }
+
+        .modal-footer .btn {
+            border-radius: 25px;
+            padding: 8px 20px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -39,11 +139,10 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1 class="mb-4">My Orders</h1>
+    <div class="container mt-5">
+        <h1 class="mb-5 page-title">My Orders</h1>
 
         <div id="orders-container">
-            <!-- Orders will be loaded here -->
             <div class="text-center py-5">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">Loading...</span>
@@ -54,8 +153,8 @@
 
         <div id="no-orders" class="text-center py-5" style="display: none;">
             <i class="fas fa-shopping-bag fa-4x mb-3 text-muted"></i>
-            <h3>You haven't placed any orders yet</h3>
-            <p class="text-muted">Browse our collection and start shopping!</p>
+            <h3>Your Order History is Empty</h3>
+            <p class="text-muted">Explore our collection and start shopping today!</p>
             <a href="books.html" class="btn btn-primary mt-3">
                 <i class="fas fa-book me-2"></i>Browse Books
             </a>
@@ -81,30 +180,42 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/app.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/cart.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Check authentication status
+        document.addEventListener('DOMContentLoaded', async function () {
             checkAuthStatus();
-
-            // Check if user is logged in
-            const token = localStorage.getItem('authToken');
+            const token = localStorage.getItem('token');
             if (!token) {
                 window.location.href = 'login.html';
                 return;
             }
 
-            // Load orders
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromCheckout = urlParams.get('fromCheckout');
+            if (fromCheckout === 'true') {
+                Swal.fire({
+                    title: 'Order Placed Successfully!',
+                    text: 'Your order has been processed and the books are on their way.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+
             await loadOrders();
         });
 
         async function loadOrders() {
             try {
+                const ordersContainer = document.getElementById('orders-container');
+                const noOrders = document.getElementById('no-orders');
+
                 const response = await fetch('/api/orders', {
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
                     }
                 });
 
@@ -113,8 +224,6 @@
                 }
 
                 const orders = await response.json();
-                const ordersContainer = document.getElementById('orders-container');
-                const noOrders = document.getElementById('no-orders');
 
                 if (orders.length === 0) {
                     ordersContainer.innerHTML = '';
@@ -125,121 +234,144 @@
                 noOrders.style.display = 'none';
                 ordersContainer.innerHTML = '';
 
-                // Sort orders by date (newest first)
                 orders.sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate));
 
                 orders.forEach(order => {
                     const orderCard = document.createElement('div');
-                    orderCard.className = 'card mb-3';
+                    orderCard.className = 'card mb-4 order-card';
                     orderCard.innerHTML = `
-                        <div class="card-header d-flex justify-content-between align-items-center">
-                            <div>
-                                <span class="fw-bold">Order #${order.orderId}</span>
-                                <span class="text-muted ms-3">${new Date(order.orderDate).toLocaleDateString()}</span>
-                            </div>
-                            <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
-                                    <p><strong>Items:</strong> ${order.orderDetails.length}</p>
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">Order #${order.orderId}</span>
+                                    <span class="text-light ms-3">${new Date(order.orderDate).toLocaleDateString()}</span>
                                 </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-primary view-order-details" data-id="${order.orderId}">
-                                        <i class="fas fa-eye me-2"></i>View Details
-                                    </button>
+                                <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
+                                        <p><strong>Items:</strong> ${order.orderDetails.length}</p>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <button class="btn btn-primary view-order-details" data-id="${order.orderId}">
+                                            <i class="fas fa-eye me-2"></i>View Details
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        `;
                     ordersContainer.appendChild(orderCard);
                 });
 
-                // Add event listeners to view details buttons
                 document.querySelectorAll('.view-order-details').forEach(button => {
                     button.addEventListener('click', () => {
                         const orderId = button.getAttribute('data-id');
-                        viewOrderDetails(orders.find(order => order.orderId == orderId));
+                        viewOrderDetails(orderId);
                     });
                 });
-
             } catch (error) {
                 console.error('Error loading orders:', error);
-                document.getElementById('orders-container').innerHTML = `
-                    <div class="alert alert-danger" role="alert">
-                        <h4 class="alert-heading">Error</h4>
-                        <p>Failed to load your orders. Please try again later.</p>
-                    </div>
-                `;
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Failed to load your orders. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+                ordersContainer.innerHTML = `
+                        <div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Error</h4>
+                            <p>Failed to load your orders. Please try again later.</p>
+                        </div>
+                    `;
             }
         }
 
         function getStatusBadgeColor(status) {
             switch (status.toLowerCase()) {
-                case 'completed':
-                    return 'success';
-                case 'processing':
-                    return 'primary';
-                case 'shipped':
-                    return 'info';
-                case 'cancelled':
-                    return 'danger';
-                case 'pending':
-                    return 'warning';
-                default:
-                    return 'secondary';
+                case 'completed': return 'success';
+                case 'processing': return 'primary';
+                case 'shipped': return 'info';
+                case 'cancelled': return 'danger';
+                case 'pending': return 'warning';
+                default: return 'secondary';
             }
         }
 
-        function viewOrderDetails(order) {
-            const modalContent = document.getElementById('order-details-content');
+        async function viewOrderDetails(orderId) {
+            try {
+                Swal.fire({
+                    title: 'Loading',
+                    text: 'Fetching order details...',
+                    allowOutsideClick: false,
+                    didOpen: () => { Swal.showLoading(); }
+                });
 
-            let itemsHtml = '';
-            order.orderDetails.forEach(item => {
-                itemsHtml += `
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <div>
-                            <span class="fw-bold">${item.book.title}</span>
-                            <span class="text-muted ms-2">x${item.quantity}</span>
-                        </div>
-                        <span>$${(item.unitPrice * item.quantity).toFixed(2)}</span>
-                    </div>
-                `;
-            });
+                const response = await fetch(`/api/orders/${orderId}`, {
+                    headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+                });
 
-            modalContent.innerHTML = `
-                <div class="mb-4">
-                    <h6>Order Information</h6>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p><strong>Order ID:</strong> #${order.orderId}</p>
-                            <p><strong>Date:</strong> ${new Date(order.orderDate).toLocaleString()}</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p><strong>Status:</strong> <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span></p>
-                            <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
-                        </div>
-                    </div>
-                </div>
+                Swal.close();
 
-                <h6>Order Items</h6>
-                <div class="card">
-                    <div class="card-body">
-                        ${itemsHtml}
-                        <hr>
-                        <div class="d-flex justify-content-between fw-bold">
-                            <span>Total</span>
-                            <span>$${order.totalAmount.toFixed(2)}</span>
-                        </div>
-                    </div>
-                </div>
-            `;
+                if (!response.ok) {
+                    throw new Error('Failed to load order details');
+                }
 
-            const orderDetailsModal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
-            orderDetailsModal.show();
+                const order = await response.json();
+                const modalContent = document.getElementById('order-details-content');
+
+                let itemsHtml = '';
+                order.orderDetails.forEach(item => {
+                    itemsHtml += `
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <span class="fw-bold">${item.book.title}</span>
+                                    <span class="text-muted ms-2">x${item.quantity}</span>
+                                </div>
+                                <span class="text-primary fw-semibold">$${(item.unitPrice * item.quantity).toFixed(2)}</span>
+                            </div>
+                        `;
+                });
+
+                modalContent.innerHTML = `
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-uppercase">Order Information</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Order ID:</strong> #${order.orderId}</p>
+                                    <p><strong>Date:</strong> ${new Date(order.orderDate).toLocaleString()}</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Status:</strong> <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span></p>
+                                    <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="fw-bold text-uppercase">Order Items</h6>
+                        <div class="card">
+                            <div class="card-body">
+                                ${itemsHtml}
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold text-dark">
+                                    <span>Total</span>
+                                    <span>$${order.totalAmount.toFixed(2)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                const orderDetailsModal = new bootstrap.Modal(document.getElementById('orderDetailsModal'));
+                orderDetailsModal.show();
+            } catch (error) {
+                console.error('Error loading order details:', error);
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Failed to load order details. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
         }
     </script>
 </body>
 </html>
-

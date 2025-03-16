@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/cart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -198,27 +200,25 @@
                         addToCart(bookId, quantity);
                     });
                 } else {
-                    const bookDetailsContainer = document.getElementById('book-details-container');
-                    bookDetailsContainer.innerHTML = `
-                                <div class="alert alert-danger" role="alert">
-                                    <h4 class="alert-heading">Book Not Found</h4>
-                                    <p>The book you are looking for does not exist or has been removed.</p>
-                                    <hr>
-                                    <p class="mb-0">Please go back to the <a href="books.html" class="alert-link">books page</a> to browse available books.</p>
-                                </div>
-                            `;
+                    Swal.fire({
+                        title: 'Book Not Found',
+                        text: 'The book you are looking for does not exist or has been removed.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    }).then(() => {
+                        window.location.href = 'books.html';
+                    });
                 }
             } catch (error) {
                 console.error('Error loading book details:', error);
-                const bookDetailsContainer = document.getElementById('book-details-container');
-                bookDetailsContainer.innerHTML = `
-                            <div class="alert alert-danger" role="alert">
-                                <h4 class="alert-heading">Error</h4>
-                                <p>An error occurred while loading the book details. Please try again later.</p>
-                                <hr>
-                                <p class="mb-0">Please go back to the <a href="books.html" class="alert-link">books page</a> to browse available books.</p>
-                            </div>
-                        `;
+                Swal.fire({
+                    title: 'Error',
+                    text: 'An error occurred while loading the book details. Please try again later.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = 'books.html';
+                });
             }
         }
     </script>

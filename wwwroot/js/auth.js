@@ -54,7 +54,7 @@ function handleLoginSuccess(token, username, role) {
     localStorage.setItem("username", username)
     localStorage.setItem("userRole", role)
     checkAuthStatus()
-
+    console.log("Login successful: " + token)
     // Redirect to home page
     window.location.href = "index.html"
 }

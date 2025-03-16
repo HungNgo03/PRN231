@@ -96,3 +96,4 @@ D:\Spring2025\PRN231\Final_Project_PRN231\BookStoreAPI\BookStoreAPI\obj\Debug\ne
 D:\Spring2025\PRN231\Final_Project_PRN231\BookStoreAPI\BookStoreAPI\obj\Debug\net6.0\BookStoreAPI.pdb
 D:\Spring2025\PRN231\Final_Project_PRN231\BookStoreAPI\BookStoreAPI\obj\Debug\net6.0\BookStoreAPI.genruntimeconfig.cache
 D:\Spring2025\PRN231\Final_Project_PRN231\BookStoreAPI\BookStoreAPI\obj\Debug\net6.0\ref\BookStoreAPI.dll
+D:\Spring2025\PRN231\Final_Project_PRN231\BookStoreAPI\BookStoreAPI\obj\Debug\net6.0\BookStoreAPI.sourcelink.json

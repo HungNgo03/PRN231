@@ -44,7 +44,7 @@ static IEdmModel GetEdmModel()
     builder.EntitySet<Category>("Categories");
     builder.EntitySet<Publisher>("Publishers");
     builder.EntitySet<Order>("Orders");
-
+    builder.EntitySet<OrderDetail>("OrderDetails");
     // Cấu hình các thuộc tính có thể null
     builder.EntityType<Book>().Property(b => b.Description).IsNullable();
     builder.EntityType<Book>().Property(b => b.ImageUrl).IsNullable();

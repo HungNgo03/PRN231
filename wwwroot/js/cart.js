@@ -1,4 +1,4 @@
-// Cart management
+﻿// Cart management
 class Cart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem("cart")) || []
@@ -86,10 +86,19 @@ const cart = new Cart()
 async function addToCart(bookId, quantity = 1) {
     try {
         // Check if user is logged in
-        const token = localStorage.getItem("authToken")
+        const token = localStorage.getItem("token")
         if (!token) {
-            alert("Please log in to add items to your cart")
-            window.location.href = "login.html"
+            Swal.fire({
+                title: 'Authentication Required',
+                text: 'Please log in to add items to your cart',
+                icon: 'info',
+                confirmButtonText: 'Go to Login'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    
+                    window.location.href = "login.html"
+                }
+            })
             return
         }
 
@@ -101,7 +110,12 @@ async function addToCart(bookId, quantity = 1) {
 
         // Check stock
         if (book.stockQuantity < quantity) {
-            alert(`Sorry, only ${book.stockQuantity} items available in stock`)
+            Swal.fire({
+                title: 'Limited Stock',
+                text: `Sorry, only ${book.stockQuantity} items available in stock`,
+                icon: 'warning',
+                confirmButtonText: 'OK'
+            })
             return
         }
 
@@ -109,43 +123,36 @@ async function addToCart(bookId, quantity = 1) {
         cart.addItem(book, quantity)
 
         // Show success message
-        alert(`Added ${quantity} copy/copies of "${book.title}" to your cart!`)
+        Swal.fire({
+            title: 'Added to Cart',
+            text: `Added ${quantity} copy/copies of "${book.title}" to your cart!`,
+            icon: 'success',
+            timer: 2000,
+            showConfirmButton: false
+        })
     } catch (error) {
         console.error("Error adding to cart:", error)
-        alert("Error adding to cart: " + error.message)
+        Swal.fire({
+            title: 'Error',
+            text: "Error adding to cart: " + error.message,
+            icon: 'error',
+            confirmButtonText: 'OK'
+        })
     }
 }
 
 // Show toast notification
 function showToast(title, message, type = "info") {
-    const toastContainer = document.getElementById("toast-container") || createToastContainer()
-
-    const toast = document.createElement("div")
-    toast.className = `toast show bg-${type === "error" ? "danger" : "success"} text-white`
-    toast.setAttribute("role", "alert")
-    toast.innerHTML = `
-        <div class="toast-header">
-            <strong class="me-auto">${title}</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
-        </div>
-        <div class="toast-body">${message}</div>
-    `
-
-    toastContainer.appendChild(toast)
-
-    setTimeout(() => {
-        toast.remove()
-    }, 3000)
-}
-
-// Create toast container if it doesn't exist
-function createToastContainer() {
-    const container = document.createElement("div")
-    container.id = "toast-container"
-    container.className = "position-fixed bottom-0 end-0 p-3"
-    container.style.zIndex = "1050"
-    document.body.appendChild(container)
-    return container
+    Swal.fire({
+        title: title,
+        text: message,
+        icon: type === "error" ? "error" : "success",
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true
+    })
 }
 
 // Add a new function to validate stock before checkout
@@ -183,59 +190,98 @@ async function validateStockBeforeCheckout() {
     }
 }
 
-// Update the processOrder function to include stock validation before checkout
+// Process order function
+// Process order function with stock reduction
 async function processOrder() {
     try {
-        const token = localStorage.getItem("authToken")
+        const token = localStorage.getItem("authToken");
         if (!token) {
-            window.location.href = "login.html"
-            return
+            Swal.fire({
+                title: 'Authentication Required',
+                text: 'Please log in to proceed with the checkout',
+                icon: 'info',
+                confirmButtonText: 'Go to Login'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "login.html";
+                }
+            });
+            return;
         }
 
-        // First, validate stock availability before proceeding
-        const stockValidationResults = await validateStockBeforeCheckout()
-        if (!stockValidationResults.success) {
-            showToast("Error", stockValidationResults.message, "error")
-            return
+        // Validate cart
+        if (cart.items.length === 0) {
+            Swal.fire({
+                title: 'Empty Cart',
+                text: 'Your cart is empty. Add some books before checking out!',
+                icon: 'warning',
+                confirmButtonText: 'OK'
+            });
+            return;
         }
 
+        // Show loading state
+        Swal.fire({
+            title: 'Processing Order',
+            text: 'Please wait while we process your order...',
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        });
+
+        // Prepare order data with Status
         const orderData = {
+            status: "Success", 
             orderDetails: cart.items.map((item) => ({
                 bookId: item.bookId,
                 quantity: item.quantity,
                 unitPrice: item.price,
             })),
-        }
+        };
 
+        // Send order to server
         const response = await fetch("/api/orders", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
+                "Authorization": `Bearer ${token}`,
             },
             body: JSON.stringify(orderData),
-        })
+        });
 
         if (!response.ok) {
-            const errorData = await response.json()
-            throw new Error(errorData.message || "Failed to process order")
+            const errorData = await response.json().catch(() => {
+                throw new Error("Failed to process order");
+            });
+            throw new Error(errorData.message || "Failed to process order");
         }
 
-        const orderResult = await response.json()
+        const orderResult = await response.json();
 
         // Clear cart after successful order
-        cart.clear()
+        cart.clear();
 
         // Show success message
-        showToast("Success", "Order placed successfully!", "success")
-
-        // Redirect to orders page
-        setTimeout(() => {
-            window.location.href = "orders.html"
-        }, 2000)
+        Swal.fire({
+            title: 'Order Placed Successfully!',
+            text: 'Your order has been placed and is being processed.',
+            icon: 'success',
+            confirmButtonText: 'View My Orders'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "orders.html";
+            } else {
+                window.location.href = "orders.html";
+            }
+        });
     } catch (error) {
-        console.error("Error processing order:", error)
-        showToast("Error", error.message, "error")
+        console.error("Error processing order:", error);
+        Swal.fire({
+            title: 'Error',
+            text: error.message || "Failed to process your order. Please try again.",
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
     }
 }
-
