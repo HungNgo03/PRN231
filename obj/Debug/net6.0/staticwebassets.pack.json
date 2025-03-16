@@ -1,0 +1,101 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\admin.html",
+      "PackagePath": "staticwebassets\\admin.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\book-details.html",
+      "PackagePath": "staticwebassets\\book-details.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\books.html",
+      "PackagePath": "staticwebassets\\books.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\cart.html",
+      "PackagePath": "staticwebassets\\cart.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\categories.html",
+      "PackagePath": "staticwebassets\\categories.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG",
+      "PackagePath": "staticwebassets\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG",
+      "PackagePath": "staticwebassets\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG",
+      "PackagePath": "staticwebassets\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg",
+      "PackagePath": "staticwebassets\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\auth.js",
+      "PackagePath": "staticwebassets\\js\\auth.js"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\orders.html",
+      "PackagePath": "staticwebassets\\orders.html"
+    },
+    {
+      "Id": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\register.html",
+      "PackagePath": "staticwebassets\\register.html"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BookStoreAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BookStoreAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BookStoreAPI.props",
+      "PackagePath": "build\\BookStoreAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BookStoreAPI.props",
+      "PackagePath": "buildMultiTargeting\\BookStoreAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BookStoreAPI.props",
+      "PackagePath": "buildTransitive\\BookStoreAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

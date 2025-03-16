@@ -1,0 +1,19 @@
+wwwroot\admin.html
+wwwroot\book-details.html
+wwwroot\books.html
+wwwroot\cart.html
+wwwroot\categories.html
+wwwroot\css\style.css
+wwwroot\images\books\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg
+wwwroot\images\books\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg
+wwwroot\images\books\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG
+wwwroot\images\books\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG
+wwwroot\images\books\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG
+wwwroot\images\books\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg
+wwwroot\index.html
+wwwroot\js\app.js
+wwwroot\js\auth.js
+wwwroot\js\cart.js
+wwwroot\login.html
+wwwroot\orders.html
+wwwroot\register.html

@@ -1,0 +1,1979 @@
+{
+  "Version": 1,
+  "Hash": "B3qy0pqLklCkfJSQveRfAjoNTWdv/oWZbxNCXBwknm8=",
+  "Source": "BookStoreAPI",
+  "BasePath": "_content/BookStoreAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BookStoreAPI\\wwwroot",
+      "Source": "BookStoreAPI",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\admin.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "admin#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ain71tn1cz",
+      "Integrity": "PqibdTMmPwbP+CI/C6xIWgz+u6jkGlQrgYsloQj6Q2I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\book-details.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "book-details#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ib6xgvsr95",
+      "Integrity": "Pgp/RuY5DrYxGlwDNh91hnwwDgqQv5Y1mUWc1xw2X6E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\book-details.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\books.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "books#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "iwvz31uacu",
+      "Integrity": "QnN3QGfWx69bG/itmQfnzJShVJrCwKwdLonMZras0GQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\books.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\cart.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "cart#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pprn8afdjp",
+      "Integrity": "83MVsOI1LUXhA/MqNf0KB4kosjIAryse230sF+/f8SQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cart.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\categories.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "categories#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0p3bbgrz6f",
+      "Integrity": "jH2YLDfxs8SHB7JMQN4QFHLOpana9mRygdqZwuYM4AQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\categories.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\css\\style.css",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "css/style#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "208ayfquom",
+      "Integrity": "/pq+L9ZdvwGm/a0wBWQkUOo58wwRJs/t57T747oF0DU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tqqorztnzz",
+      "Integrity": "m2sqgiKQT96OymgO6bDq+6SIZcYKvl22/UQZNh2Og44=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wnrm49t8ls",
+      "Integrity": "dLLtdiqLxMH0tdZ07Jj8I2F6oDkKwkw/1EFEcAmBNX0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425#[.{fingerprint}]?.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "utgjv6g6fh",
+      "Integrity": "8rKBQvHMCco6qItK9c1+KWwdKgaqFewqFi7Ow5gSZuU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy#[.{fingerprint}]?.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m80va7i6v6",
+      "Integrity": "CocTVTAEmFuJWX4SgU9MeELkEV8wvSP7ADXadyvrFJc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy#[.{fingerprint}]?.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "czrgvnnf0k",
+      "Integrity": "qFzLz7VOxi0TTgBbhjpqA4TVV/F/+5l4aSqeSXpOaRA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "images/books/c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nmdqgrgvvw",
+      "Integrity": "gRwKd3m8jqWNXAn/bl5Tlbd7BpgmUGP+AXZlX089MEk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\index.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bim4okkkmw",
+      "Integrity": "83KPewF3sjkC5g0cipowNhhFTv44HI6zJd3PSal+Ejo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\app.js",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "js/app#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fpfboari2d",
+      "Integrity": "Q9TmWGFhqFpeIEQqYxqSvLy2IXwgxO/vWHVmn8HK+D0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\app.js"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\auth.js",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "js/auth#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wm9modsx9l",
+      "Integrity": "uLmlDYXnpTWX05/LyMYkJ7IVRHcJW4r3NKK5SFdXANA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\auth.js"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\cart.js",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "js/cart#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yqt033c15i",
+      "Integrity": "ZprSYIU7ccDMO7bFSvanXzyeNSORSvo/4pDouNqGPKk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\cart.js"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\login.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "p4xr2kp04w",
+      "Integrity": "eYIYy1NGGzprh3WwJgowjeLolLNftbAGUzG1GXcDZR4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\orders.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "orders#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "892sce5zrh",
+      "Integrity": "bI5pbVhgTT0vueZyiEmISiPEL8K2z8jmTrEX0cKSAgM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\orders.html"
+    },
+    {
+      "Identity": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\register.html",
+      "SourceId": "BookStoreAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\",
+      "BasePath": "_content/BookStoreAPI",
+      "RelativePath": "register#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fzkj2tqxt4",
+      "Integrity": "BVmfKQRrpFb5gMN7SJd3eaT0ez7d7b55Sh1aPXuZOjY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\register.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "admin.ain71tn1cz.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\admin.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PqibdTMmPwbP+CI/C6xIWgz+u6jkGlQrgYsloQj6Q2I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:53:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ain71tn1cz"
+        },
+        {
+          "Name": "label",
+          "Value": "admin.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PqibdTMmPwbP+CI/C6xIWgz+u6jkGlQrgYsloQj6Q2I="
+        }
+      ]
+    },
+    {
+      "Route": "admin.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\admin.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36341"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PqibdTMmPwbP+CI/C6xIWgz+u6jkGlQrgYsloQj6Q2I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:53:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PqibdTMmPwbP+CI/C6xIWgz+u6jkGlQrgYsloQj6Q2I="
+        }
+      ]
+    },
+    {
+      "Route": "book-details.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\book-details.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Pgp/RuY5DrYxGlwDNh91hnwwDgqQv5Y1mUWc1xw2X6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Pgp/RuY5DrYxGlwDNh91hnwwDgqQv5Y1mUWc1xw2X6E="
+        }
+      ]
+    },
+    {
+      "Route": "book-details.ib6xgvsr95.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\book-details.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12681"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Pgp/RuY5DrYxGlwDNh91hnwwDgqQv5Y1mUWc1xw2X6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:18:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ib6xgvsr95"
+        },
+        {
+          "Name": "label",
+          "Value": "book-details.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Pgp/RuY5DrYxGlwDNh91hnwwDgqQv5Y1mUWc1xw2X6E="
+        }
+      ]
+    },
+    {
+      "Route": "books.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\books.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QnN3QGfWx69bG/itmQfnzJShVJrCwKwdLonMZras0GQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:33:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QnN3QGfWx69bG/itmQfnzJShVJrCwKwdLonMZras0GQ="
+        }
+      ]
+    },
+    {
+      "Route": "books.iwvz31uacu.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\books.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17748"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QnN3QGfWx69bG/itmQfnzJShVJrCwKwdLonMZras0GQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:33:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "iwvz31uacu"
+        },
+        {
+          "Name": "label",
+          "Value": "books.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QnN3QGfWx69bG/itmQfnzJShVJrCwKwdLonMZras0GQ="
+        }
+      ]
+    },
+    {
+      "Route": "cart.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\cart.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8546"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83MVsOI1LUXhA/MqNf0KB4kosjIAryse230sF+/f8SQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-83MVsOI1LUXhA/MqNf0KB4kosjIAryse230sF+/f8SQ="
+        }
+      ]
+    },
+    {
+      "Route": "cart.pprn8afdjp.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\cart.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8546"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83MVsOI1LUXhA/MqNf0KB4kosjIAryse230sF+/f8SQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:46:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pprn8afdjp"
+        },
+        {
+          "Name": "label",
+          "Value": "cart.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-83MVsOI1LUXhA/MqNf0KB4kosjIAryse230sF+/f8SQ="
+        }
+      ]
+    },
+    {
+      "Route": "categories.0p3bbgrz6f.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\categories.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jH2YLDfxs8SHB7JMQN4QFHLOpana9mRygdqZwuYM4AQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:53:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0p3bbgrz6f"
+        },
+        {
+          "Name": "label",
+          "Value": "categories.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jH2YLDfxs8SHB7JMQN4QFHLOpana9mRygdqZwuYM4AQ="
+        }
+      ]
+    },
+    {
+      "Route": "categories.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\categories.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6638"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jH2YLDfxs8SHB7JMQN4QFHLOpana9mRygdqZwuYM4AQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:53:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jH2YLDfxs8SHB7JMQN4QFHLOpana9mRygdqZwuYM4AQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.208ayfquom.css",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pq+L9ZdvwGm/a0wBWQkUOo58wwRJs/t57T747oF0DU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "208ayfquom"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pq+L9ZdvwGm/a0wBWQkUOo58wwRJs/t57T747oF0DU="
+        }
+      ]
+    },
+    {
+      "Route": "css/style.css",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2182"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/pq+L9ZdvwGm/a0wBWQkUOo58wwRJs/t57T747oF0DU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/pq+L9ZdvwGm/a0wBWQkUOo58wwRJs/t57T747oF0DU="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m2sqgiKQT96OymgO6bDq+6SIZcYKvl22/UQZNh2Og44=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:33:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m2sqgiKQT96OymgO6bDq+6SIZcYKvl22/UQZNh2Og44="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.tqqorztnzz.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m2sqgiKQT96OymgO6bDq+6SIZcYKvl22/UQZNh2Og44=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:33:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tqqorztnzz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/1ac1e64d-0906-4cd5-beac-fc9712f876ef_481991176_691420770118613_3169035685282717743_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m2sqgiKQT96OymgO6bDq+6SIZcYKvl22/UQZNh2Og44="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dLLtdiqLxMH0tdZ07Jj8I2F6oDkKwkw/1EFEcAmBNX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 13:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-dLLtdiqLxMH0tdZ07Jj8I2F6oDkKwkw/1EFEcAmBNX0="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.wnrm49t8ls.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"dLLtdiqLxMH0tdZ07Jj8I2F6oDkKwkw/1EFEcAmBNX0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 13:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnrm49t8ls"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/495c2eeb-a6ac-4cdc-b2bf-ee171c887dfc_461829323_874763488088182_6904967106097647323_n.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-dLLtdiqLxMH0tdZ07Jj8I2F6oDkKwkw/1EFEcAmBNX0="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1832203"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8rKBQvHMCco6qItK9c1+KWwdKgaqFewqFi7Ow5gSZuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8rKBQvHMCco6qItK9c1+KWwdKgaqFewqFi7Ow5gSZuU="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.utgjv6g6fh.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1832203"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8rKBQvHMCco6qItK9c1+KWwdKgaqFewqFi7Ow5gSZuU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "utgjv6g6fh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/7e9bb777-ef11-4614-8095-5b12087f816d_IMG_2425.JPG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8rKBQvHMCco6qItK9c1+KWwdKgaqFewqFi7Ow5gSZuU="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "172967"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CocTVTAEmFuJWX4SgU9MeELkEV8wvSP7ADXadyvrFJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CocTVTAEmFuJWX4SgU9MeELkEV8wvSP7ADXadyvrFJc="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.m80va7i6v6.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "172967"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CocTVTAEmFuJWX4SgU9MeELkEV8wvSP7ADXadyvrFJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m80va7i6v6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/8b970f01-434d-4ea1-a7cb-954b799c4fcb_IMG_2155 - Copy.JPG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-CocTVTAEmFuJWX4SgU9MeELkEV8wvSP7ADXadyvrFJc="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.czrgvnnf0k.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1505464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qFzLz7VOxi0TTgBbhjpqA4TVV/F/+5l4aSqeSXpOaRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "czrgvnnf0k"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qFzLz7VOxi0TTgBbhjpqA4TVV/F/+5l4aSqeSXpOaRA="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\ba440838-dc07-43a1-8d5f-5c1a4200fd19_IMG_2385 - Copy.JPG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1505464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qFzLz7VOxi0TTgBbhjpqA4TVV/F/+5l4aSqeSXpOaRA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qFzLz7VOxi0TTgBbhjpqA4TVV/F/+5l4aSqeSXpOaRA="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1197489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gRwKd3m8jqWNXAn/bl5Tlbd7BpgmUGP+AXZlX089MEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gRwKd3m8jqWNXAn/bl5Tlbd7BpgmUGP+AXZlX089MEk="
+        }
+      ]
+    },
+    {
+      "Route": "images/books/c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.nmdqgrgvvw.jpg",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\images\\books\\c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1197489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gRwKd3m8jqWNXAn/bl5Tlbd7BpgmUGP+AXZlX089MEk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 23:34:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nmdqgrgvvw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/books/c175cd6c-9c6c-409c-95ee-2c1fea4a47f3_z5765170119968_3be5f89311a990930805ea49b92a5e93.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gRwKd3m8jqWNXAn/bl5Tlbd7BpgmUGP+AXZlX089MEk="
+        }
+      ]
+    },
+    {
+      "Route": "index.bim4okkkmw.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83KPewF3sjkC5g0cipowNhhFTv44HI6zJd3PSal+Ejo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:33:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bim4okkkmw"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-83KPewF3sjkC5g0cipowNhhFTv44HI6zJd3PSal+Ejo="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9166"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"83KPewF3sjkC5g0cipowNhhFTv44HI6zJd3PSal+Ejo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:33:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-83KPewF3sjkC5g0cipowNhhFTv44HI6zJd3PSal+Ejo="
+        }
+      ]
+    },
+    {
+      "Route": "js/app.fpfboari2d.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q9TmWGFhqFpeIEQqYxqSvLy2IXwgxO/vWHVmn8HK+D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:05:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fpfboari2d"
+        },
+        {
+          "Name": "label",
+          "Value": "js/app.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q9TmWGFhqFpeIEQqYxqSvLy2IXwgxO/vWHVmn8HK+D0="
+        }
+      ]
+    },
+    {
+      "Route": "js/app.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\app.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q9TmWGFhqFpeIEQqYxqSvLy2IXwgxO/vWHVmn8HK+D0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:05:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q9TmWGFhqFpeIEQqYxqSvLy2IXwgxO/vWHVmn8HK+D0="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\auth.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5296"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uLmlDYXnpTWX05/LyMYkJ7IVRHcJW4r3NKK5SFdXANA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uLmlDYXnpTWX05/LyMYkJ7IVRHcJW4r3NKK5SFdXANA="
+        }
+      ]
+    },
+    {
+      "Route": "js/auth.wm9modsx9l.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\auth.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5296"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uLmlDYXnpTWX05/LyMYkJ7IVRHcJW4r3NKK5SFdXANA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wm9modsx9l"
+        },
+        {
+          "Name": "label",
+          "Value": "js/auth.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uLmlDYXnpTWX05/LyMYkJ7IVRHcJW4r3NKK5SFdXANA="
+        }
+      ]
+    },
+    {
+      "Route": "js/cart.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\cart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7389"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZprSYIU7ccDMO7bFSvanXzyeNSORSvo/4pDouNqGPKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:45:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZprSYIU7ccDMO7bFSvanXzyeNSORSvo/4pDouNqGPKk="
+        }
+      ]
+    },
+    {
+      "Route": "js/cart.yqt033c15i.js",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\js\\cart.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7389"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZprSYIU7ccDMO7bFSvanXzyeNSORSvo/4pDouNqGPKk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 16 Mar 2025 17:45:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yqt033c15i"
+        },
+        {
+          "Name": "label",
+          "Value": "js/cart.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZprSYIU7ccDMO7bFSvanXzyeNSORSvo/4pDouNqGPKk="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eYIYy1NGGzprh3WwJgowjeLolLNftbAGUzG1GXcDZR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:42:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eYIYy1NGGzprh3WwJgowjeLolLNftbAGUzG1GXcDZR4="
+        }
+      ]
+    },
+    {
+      "Route": "login.p4xr2kp04w.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eYIYy1NGGzprh3WwJgowjeLolLNftbAGUzG1GXcDZR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:42:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p4xr2kp04w"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eYIYy1NGGzprh3WwJgowjeLolLNftbAGUzG1GXcDZR4="
+        }
+      ]
+    },
+    {
+      "Route": "orders.892sce5zrh.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\orders.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bI5pbVhgTT0vueZyiEmISiPEL8K2z8jmTrEX0cKSAgM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:09:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "892sce5zrh"
+        },
+        {
+          "Name": "label",
+          "Value": "orders.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bI5pbVhgTT0vueZyiEmISiPEL8K2z8jmTrEX0cKSAgM="
+        }
+      ]
+    },
+    {
+      "Route": "orders.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\orders.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bI5pbVhgTT0vueZyiEmISiPEL8K2z8jmTrEX0cKSAgM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 20:09:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bI5pbVhgTT0vueZyiEmISiPEL8K2z8jmTrEX0cKSAgM="
+        }
+      ]
+    },
+    {
+      "Route": "register.fzkj2tqxt4.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BVmfKQRrpFb5gMN7SJd3eaT0ez7d7b55Sh1aPXuZOjY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:42:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fzkj2tqxt4"
+        },
+        {
+          "Name": "label",
+          "Value": "register.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BVmfKQRrpFb5gMN7SJd3eaT0ez7d7b55Sh1aPXuZOjY="
+        }
+      ]
+    },
+    {
+      "Route": "register.html",
+      "AssetFile": "D:\\Spring2025\\PRN231\\Final_Project_PRN231\\BookStoreAPI\\BookStoreAPI\\wwwroot\\register.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BVmfKQRrpFb5gMN7SJd3eaT0ez7d7b55Sh1aPXuZOjY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 15 Mar 2025 19:42:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BVmfKQRrpFb5gMN7SJd3eaT0ez7d7b55Sh1aPXuZOjY="
+        }
+      ]
+    }
+  ]
+}

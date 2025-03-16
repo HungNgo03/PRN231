@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books - Book Store API Client</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-book-open me-2"></i>Book Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="books.html">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item admin-only" style="display: none;">
+                        <a class="nav-link" href="admin.html">Admin</a>
+                    </li>
+                </ul>
+                <div class="navbar-right">
+                    <!-- Nội dung sẽ được thay thế bởi updateAuthUI() -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Books</h1>
+            <div class="d-flex">
+                <div class="input-group me-2" style="width: 300px;">
+                    <input type="text" class="form-control" placeholder="Search books..." id="search-input">
+                    <button class="btn btn-outline-secondary" type="button" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <select class="form-select" id="category-filter" style="width: 200px;">
+                    <option value="">All Categories</option>
+                    <!-- Categories will be loaded here -->
+                </select>
+            </div>
+        </div>
+
+        <div class="row" id="books-container">
+            <!-- Books will be loaded here -->
+            <div class="col-12 text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Loading books...</p>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation" class="mt-4">
+            <ul class="pagination justify-content-center" id="pagination">
+                <!-- Pagination will be generated here -->
+            </ul>
+        </nav>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Book Store API</h5>
+                    <p>A demo application showcasing ASP.NET Core Web API with RESTful services.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="books.html" class="text-white">Books</a></li>
+                        <li><a href="categories.html" class="text-white">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <address>
+                        <i class="fas fa-map-marker-alt me-2"></i> 123 Book Street, Library City<br>
+                        <i class="fas fa-phone me-2"></i> (123) 456-7890<br>
+                        <i class="fas fa-envelope me-2"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdd4d3dbd2fddfd2d2d6cec9d2cfd893ded2d0">[email&#160;protected]</a>
+                    </address>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Book Store. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Details Modal -->
+    <div class="modal fade" id="bookDetailsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-book-title">Book Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img id="modal-book-image" src="/placeholder.svg" class="img-fluid rounded" alt="Book Cover">
+                        </div>
+                        <div class="col-md-8">
+                            <p><strong>ISBN:</strong> <span id="modal-book-isbn"></span></p>
+                            <p><strong>Published Date:</strong> <span id="modal-book-date"></span></p>
+                            <p><strong>Price:</strong> <span id="modal-book-price"></span></p>
+                            <p><strong>Category:</strong> <span id="modal-book-category"></span></p>
+                            <p><strong>Publisher:</strong> <span id="modal-book-publisher"></span></p>
+                            <p><strong>Stock:</strong> <span id="modal-book-stock"></span> available</p>
+                            <p><strong>Description:</strong></p>
+                            <p id="modal-book-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modal-view-details">View Full Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        let currentPage = 1;
+        const pageSize = 8;
+        let totalBooks = 0;
+        let currentCategory = '';
+        let currentSearch = '';
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Check authentication status
+            checkAuthStatus();
+
+            // Load categories for filter
+            await loadCategoriesForFilter();
+
+            // Load initial books
+            await loadBooks();
+
+            // Add event listeners
+            document.getElementById('search-btn').addEventListener('click', handleSearch);
+            document.getElementById('search-input').addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    handleSearch();
+                }
+            });
+
+            document.getElementById('category-filter').addEventListener('change', function () {
+                currentCategory = this.value;
+                currentPage = 1;
+                loadBooks();
+            });
+        });
+
+        async function loadCategoriesForFilter() {
+            try {
+                const response = await fetch('/api/categories');
+                if (response.ok) {
+                    const categories = await response.json();
+                    const categoryFilter = document.getElementById('category-filter');
+
+                    categories.forEach(category => {
+                        const option = document.createElement('option');
+                        option.value = category.categoryId;
+                        option.textContent = category.name;
+                        categoryFilter.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        }
+
+        async function loadBooks() {
+            try {
+                let url = `/api/books?$skip=${(currentPage - 1) * pageSize}&$top=${pageSize}&$count=true`;
+
+                if (currentCategory) {
+                    url += `&$filter=categoryId eq ${currentCategory}`;
+                }
+
+                if (currentSearch) {
+                    const searchFilter = `contains(tolower(title), '${currentSearch.toLowerCase()}')`;
+                    url += currentCategory ? ` and ${searchFilter}` : `&$filter=${searchFilter}`;
+                }
+
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    const books = data.value || data;
+                    totalBooks = data['@odata.count'] || books.length;
+
+                    const booksContainer = document.getElementById('books-container');
+                    booksContainer.innerHTML = '';
+
+                    if (books.length === 0) {
+                        booksContainer.innerHTML = '<div class="col-12 text-center py-5"><p>No books found matching your criteria.</p></div>';
+                        document.getElementById('pagination').innerHTML = '';
+                        return;
+                    }
+
+                    books.forEach(book => {
+                        const bookCard = document.createElement('div');
+                        bookCard.className = 'col-md-3 mb-4';
+                        bookCard.innerHTML = `
+                                <div class="card book-card h-100 shadow-sm">
+                                    <img src="${book.imageUrl || '/placeholder.svg?height=200&width=200'}" class="card-img-top" alt="${book.title}" style="height: 200px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${book.title}</h5>
+                                        <p class="card-text text-truncate">${book.description || 'No description available'}</p>
+                                        <p class="card-text"><strong>$${book.price.toFixed(2)}</strong></p>
+                                    </div>
+                                    <div class="card-footer bg-white border-top-0 d-flex">
+                                        <button class="btn btn-primary btn-sm flex-grow-1 me-1 view-book" data-id="${book.bookId}">View Details</button>
+                                        <button class="btn btn-success btn-sm add-to-cart-btn" data-id="${book.bookId}">
+                                            <i class="fas fa-cart-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                        booksContainer.appendChild(bookCard);
+                    });
+
+                    // Add event listeners to view buttons
+                    document.querySelectorAll('.view-book').forEach(button => {
+                        button.addEventListener('click', () => {
+                            const bookId = button.getAttribute('data-id');
+                            viewBookDetails(bookId);
+                        });
+                    });
+
+                    // Add event listeners to add to cart buttons
+                    document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+                        button.addEventListener("click", (e) => {
+                            e.stopPropagation();
+                            const bookId = button.getAttribute("data-id");
+                            addToCart(bookId, 1);
+                        });
+                    });
+
+                    // Generate pagination
+                    generatePagination();
+                }
+            } catch (error) {
+                console.error('Error loading books:', error);
+                const booksContainer = document.getElementById('books-container');
+                booksContainer.innerHTML = '<div class="col-12 text-center py-5"><p>Error loading books. Please try again later.</p></div>';
+            }
+        }
+
+        function generatePagination() {
+            const totalPages = Math.ceil(totalBooks / pageSize);
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            if (totalPages <= 1) return;
+
+            // Previous button
+            const prevLi = document.createElement('li');
+            prevLi.className = `page-item ${currentPage === 1 ? 'disabled' : ''}`;
+            prevLi.innerHTML = `<a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>`;
+            prevLi.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (currentPage > 1) {
+                    currentPage--;
+                    loadBooks();
+                }
+            });
+            pagination.appendChild(prevLi);
+
+            // Page numbers
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, startPage + 4);
+
+            for (let i = startPage; i <= endPage; i++) {
+                const pageLi = document.createElement('li');
+                pageLi.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                pageLi.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+                pageLi.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    currentPage = i;
+                    loadBooks();
+                });
+                pagination.appendChild(pageLi);
+            }
+
+            // Next button
+            const nextLi = document.createElement('li');
+            nextLi.className = `page-item ${currentPage === totalPages ? 'disabled' : ''}`;
+            nextLi.innerHTML = `<a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>`;
+            nextLi.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    loadBooks();
+                }
+            });
+            pagination.appendChild(nextLi);
+        }
+
+        function handleSearch() {
+            currentSearch = document.getElementById('search-input').value.trim();
+            currentPage = 1;
+            loadBooks();
+        }
+
+        async function viewBookDetails(bookId) {
+            try {
+                const response = await fetch(`/api/books/${bookId}`);
+                if (response.ok) {
+                    const book = await response.json();
+
+                    // Populate modal with book details
+                    document.getElementById('modal-book-title').textContent = book.title;
+                    document.getElementById('modal-book-image').src = book.imageUrl || '/placeholder.svg?height=300&width=200';
+                    document.getElementById('modal-book-isbn').textContent = book.isbn;
+                    document.getElementById('modal-book-date').textContent = book.publishedDate ? new Date(book.publishedDate).toLocaleDateString() : 'N/A';
+                    document.getElementById('modal-book-price').textContent = `$${book.price.toFixed(2)}`;
+                    document.getElementById('modal-book-category').textContent = book.category ? book.category.name : 'N/A';
+                    document.getElementById('modal-book-publisher').textContent = book.publisher ? book.publisher.name : 'N/A';
+                    document.getElementById('modal-book-stock').textContent = book.stockQuantity;
+                    document.getElementById('modal-book-description').textContent = book.description || 'No description available';
+
+                    // Set up view full details button
+                    document.getElementById('modal-view-details').onclick = function () {
+                        window.location.href = `book-details.html?id=${book.bookId}`;
+                    };
+
+                    // Show the modal
+                    const bookDetailsModal = new bootstrap.Modal(document.getElementById('bookDetailsModal'));
+                    bookDetailsModal.show();
+                }
+            } catch (error) {
+                console.error('Error loading book details:', error);
+            }
+        }
+    </script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
+
