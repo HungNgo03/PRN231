@@ -38,11 +38,11 @@ namespace BookStoreAPI.Services
             // In production, use BCrypt or another secure hashing algorithm
 
             var token = GenerateJwtToken(user);
-
             return new AuthResponse
             {
                 Success = true,
                 Token = token,
+                UserId = user.UserId,
                 Username = user.Username,
                 Email = user.Email,
                 Role = user.Role,
@@ -94,6 +94,7 @@ namespace BookStoreAPI.Services
             {
                 Success = true,
                 Token = token,
+                UserId = user.UserId,
                 Username = user.Username,
                 Email = user.Email,
                 Role = user.Role,
@@ -111,7 +112,8 @@ namespace BookStoreAPI.Services
                 new Claim(JwtRegisteredClaimNames.Sub, user.Username),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(JwtRegisteredClaimNames.NameId, user.UserId.ToString()) // 🟢 Định danh tiêu chuẩn
             };
 
             var token = new JwtSecurityToken(

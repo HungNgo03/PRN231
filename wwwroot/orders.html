@@ -128,6 +128,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="categories.html">Categories</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html">Orders</a>
+                    </li>
                     <li class="nav-item admin-only" style="display: none;">
                         <a class="nav-link" href="admin.html">Admin</a>
                     </li>
@@ -213,9 +216,14 @@
                 const ordersContainer = document.getElementById('orders-container');
                 const noOrders = document.getElementById('no-orders');
 
-                const response = await fetch('/api/orders', {
+                const token = localStorage.getItem('authToken');
+                if (!token) {
+                    throw new Error('No authentication token found');
+                }
+
+                const response = await fetch('/api/orders/MyOrders', {
                     headers: {
-                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                        'Authorization': `Bearer ${token}`
                     }
                 });
 
@@ -240,27 +248,27 @@
                     const orderCard = document.createElement('div');
                     orderCard.className = 'card mb-4 order-card';
                     orderCard.innerHTML = `
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="fw-bold">Order #${order.orderId}</span>
-                                    <span class="text-light ms-3">${new Date(order.orderDate).toLocaleDateString()}</span>
-                                </div>
-                                <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
-                                        <p><strong>Items:</strong> ${order.orderDetails.length}</p>
-                                    </div>
-                                    <div class="col-md-4 text-end">
-                                        <button class="btn btn-primary view-order-details" data-id="${order.orderId}">
-                                            <i class="fas fa-eye me-2"></i>View Details
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="fw-bold">Order #${order.orderId}</span>
+                        <span class="text-light ms-3">${new Date(order.orderDate).toLocaleDateString()}</span>
+                    </div>
+                    <span class="badge bg-${getStatusBadgeColor(order.status)}">${order.status}</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p><strong>Total:</strong> $${order.totalAmount.toFixed(2)}</p>
+                            <p><strong>Items:</strong> ${order.orderDetails.length}</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button class="btn btn-primary view-order-details" data-id="${order.orderId}">
+                                <i class="fas fa-eye me-2"></i>View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
                     ordersContainer.appendChild(orderCard);
                 });
 
@@ -278,14 +286,21 @@
                     icon: 'error',
                     confirmButtonText: 'OK'
                 });
+                const ordersContainer = document.getElementById('orders-container');
                 ordersContainer.innerHTML = `
-                        <div class="alert alert-danger" role="alert">
-                            <h4 class="alert-heading">Error</h4>
-                            <p>Failed to load your orders. Please try again later.</p>
-                        </div>
-                    `;
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Error</h4>
+                <p>Failed to load your orders. Please try again later.</p>
+            </div>
+        `;
             }
         }
+
+
+
+
+
+
 
         function getStatusBadgeColor(status) {
             switch (status.toLowerCase()) {

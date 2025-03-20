@@ -1,52 +1,68 @@
 ﻿// Authentication UI management
+// Authentication UI management
 function checkAuthStatus() {
-    const authButtons = document.querySelector("#auth-buttons")
-    const userInfo = document.querySelector("#user-info")
-    const adminLinks = document.querySelectorAll(".admin-only")
-    const usernameDisplay = document.querySelector("#username-display")
+    const authButtons = document.querySelector("#auth-buttons");
+    const userInfo = document.querySelector("#user-info");
+    const adminLinks = document.querySelectorAll(".admin-only");
+    const usernameDisplay = document.querySelector("#username-display");
 
     // Get authentication data from localStorage
-    const token = localStorage.getItem("authToken")
-    const username = localStorage.getItem("username")
-    const userRole = localStorage.getItem("userRole")
+    const token = localStorage.getItem("authToken");
+    const username = localStorage.getItem("username");
+    const userRole = localStorage.getItem("userRole");
+
+    if (token) {
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        const expiration = new Date(payload.exp * 1000);
+
+        if (expiration < new Date()) {
+            // Token has expired
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("username");
+            localStorage.removeItem("userRole");
+            updateAuthUI(false);
+            return;
+        }
+    }
 
     if (token && username) {
         // User is logged in
-        if (authButtons) authButtons.style.display = "none"
+        if (authButtons) authButtons.style.display = "none";
         if (userInfo) {
-            userInfo.style.display = "flex"
-            if (usernameDisplay) usernameDisplay.textContent = username
+            userInfo.style.display = "flex";
+            if (usernameDisplay) usernameDisplay.textContent = username;
         }
 
         // Show admin links only if user is admin
         if (userRole === "Admin") {
-            adminLinks.forEach((link) => (link.style.display = "block"))
+            adminLinks.forEach((link) => (link.style.display = "block"));
         } else {
-            adminLinks.forEach((link) => (link.style.display = "none"))
+            adminLinks.forEach((link) => (link.style.display = "none"));
         }
     } else {
         // User is not logged in
-        if (authButtons) authButtons.style.display = "flex"
-        if (userInfo) userInfo.style.display = "none"
-        adminLinks.forEach((link) => (link.style.display = "none"))
+        if (authButtons) authButtons.style.display = "flex";
+        if (userInfo) userInfo.style.display = "none";
+        adminLinks.forEach((link) => (link.style.display = "none"));
 
         // If on admin page, redirect to home
         if (window.location.pathname.includes("admin")) {
-            window.location.href = "index.html"
+            window.location.href = "index.html";
         }
     }
 
     // Add logout event listener
-    const logoutBtn = document.querySelector("#logout-btn")
+    const logoutBtn = document.querySelector("#logout-btn");
     if (logoutBtn) {
         logoutBtn.addEventListener("click", () => {
-            localStorage.removeItem("authToken")
-            localStorage.removeItem("username")
-            localStorage.removeItem("userRole")
-            window.location.href = "index.html"
-        })
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("username");
+            localStorage.removeItem("userRole");
+            window.location.href = "index.html";
+        });
     }
 }
+
 
 // Function to handle successful login
 function handleLoginSuccess(token, username, role) {

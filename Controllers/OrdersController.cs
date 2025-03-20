@@ -73,11 +73,57 @@ namespace BookStore.Controllers
             }
         }
 
+        // GET: api/Orders/MyOrders
+        [HttpGet("MyOrders")]
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<Order>>> GetUserOrders()
+        {
+            try
+            {
+                // Log all claims for debugging
+                var claims = User.Claims.Select(c => $"{c.Type}: {c.Value}");
+                _logger.LogInformation("User claims: {Claims}", string.Join(", ", claims));
+
+                // Find the "nameid" claim that represents the numeric user ID
+                var userIdClaim = User.Claims
+                    .Where(c => c.Type == "nameid" || c.Type == ClaimTypes.NameIdentifier)
+                    .FirstOrDefault(c => int.TryParse(c.Value, out _)); // Pick the one that’s an integer
+                var userId = userIdClaim?.Value;
+
+                if (userId == null)
+                {
+                    _logger.LogWarning("User ID not found in token");
+                    return Unauthorized();
+                }
+
+                _logger.LogInformation($"Fetched user ID: {userId}");
+
+                if (!int.TryParse(userId, out int parsedUserId))
+                {
+                    _logger.LogWarning("User ID is not a valid integer: {UserId}", userId);
+                    return BadRequest("Invalid user ID format");
+                }
+
+                var orders = await _context.Orders
+                    .Where(o => o.UserId == parsedUserId)
+                    .Include(o => o.User)
+                    .Include(o => o.OrderDetails)
+                    .ThenInclude(od => od.Book)
+                    .ToListAsync();
+
+                _logger.LogInformation($"Found {orders.Count} orders for user ID: {userId}");
+
+                return Ok(orders);
+            }
+            catch (Exception ex)
+            {
+                //_logger.LogError(ex, "Error fetching user orders for userId: {UserId}", userId);
+                return StatusCode(500, "Internal server error: " + ex.Message);
+            }
+        }
         // POST: api/Orders
         [HttpPost]
         [Authorize] // Chỉ yêu cầu xác thực, không cần vai trò Admin vì khách hàng có thể đặt hàng
-        [HttpPost]
-        [Authorize]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
             if (!ModelState.IsValid)

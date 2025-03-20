@@ -441,9 +441,8 @@ async function loadAdminData() {
     // Check if user is admin
     const userRole = localStorage.getItem("userRole")
     if (userRole !== "Admin") {
-        window.location.href = "index.html"
-        alert("You do not have permission to access the admin area.")
-        return
+        Swal.fire('Error', 'You do not have permission to access the admin area.', 'error').then(() => window.location.href = "index.html");
+        return;
     }
 
     // Load books for admin table
@@ -1094,10 +1093,6 @@ async function deletePublisher(publisherId) {
 }
 
 // Mock addToCart function (replace with your actual implementation)
-function addToCart(bookId, quantity) {
-    console.log(`Added book ${bookId} with quantity ${quantity} to cart`)
-    alert(`Added book ${bookId} with quantity ${quantity} to cart! (This is a mock function)`)
-    // In a real application, you would update the cart data in localStorage,
-    // send an API request to update the cart on the server, etc.
-}
+// Initialize cart
+
 

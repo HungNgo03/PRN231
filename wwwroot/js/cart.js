@@ -95,7 +95,6 @@ async function addToCart(bookId, quantity = 1) {
                 confirmButtonText: 'Go to Login'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    
                     window.location.href = "login.html"
                 }
             })
@@ -230,9 +229,14 @@ async function processOrder() {
             }
         });
 
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        console.log(payload); // 🟢 Kiểm tra xem có UserId không
+        const userId = payload["nameid"];
+
         // Prepare order data with Status
         const orderData = {
-            status: "Success", 
+            userId: userId,
+            status: "Success",
             orderDetails: cart.items.map((item) => ({
                 bookId: item.bookId,
                 quantity: item.quantity,
